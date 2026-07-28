@@ -63,7 +63,14 @@ print(bray_dist)
 # ---------------------------------------------------------
 # 4. Perform PERMANOVA
 # ---------------------------------------------------------
+# Set seed for reproducibility
+set.seed(123)
 
+permanova_result <- adonis2(
+  bray_dist ~ Treatment,
+  data = metadata,
+  permutations = 999
+)
 permanova_result <- adonis2(
   bray_dist ~ Treatment,
   data = metadata,
