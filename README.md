@@ -1,35 +1,76 @@
-# Soil Microbiome Analysis
+ # Soil Microbiome Analysis
 
-This repository contains reproducible R examples related to soil microbiome and community ecology analysis.
+This repository contains reproducible R workflows developed for soil microbiome and microbial community ecology analysis.
 
-## Current workflow
+## Repository overview
 
-The `permanova_example.R` script demonstrates a basic multivariate community analysis workflow using the `vegan` package.
+The repository includes both a simulated PERMANOVA workflow and descriptive PCoA workflows developed using aggregated microbiome observations from my doctoral research.
 
-The workflow includes:
+## Workflows
 
-1. Simulated microbial community abundance data
-2. Sample metadata and treatment grouping
-3. Bray-Curtis dissimilarity
-4. PERMANOVA using `adonis2()`
-5. 999 permutations
-6. Assessment of multivariate dispersion using `betadisper()`
-7. Permutation testing of dispersion using `permutest()`
+### 1. PERMANOVA demonstration
 
-## R package
+`permanova_example.R`
 
-- `vegan`
+A reproducible example using the `vegan` package to demonstrate:
+
+- Bray-Curtis dissimilarity
+- PERMANOVA using `adonis2()`
+- 999 permutations
+- multivariate dispersion using `betadisper()`
+- permutation testing using `permutest()`
+
+The dataset used in this script is simulated for learning and demonstration purposes.
+
+### 2. Genus-level PCoA
+
+`phd_genus_pcoa.R`
+
+A descriptive genus-level community analysis using:
+
+- Bray-Curtis dissimilarity
+- exclusion of unassigned reads
+- Principal Coordinates Analysis (PCoA)
+- ordination visualization
+
+The analysis compares aggregated microbiome observations associated with different soil/genotype categories from my doctoral research.
+
+### 3. Microbial niche PCoA
+
+`phd_niche_pcoa.R`
+
+A descriptive genus-level community analysis comparing aggregated observations from:
+
+- Bulk soil
+- Endophytes
+- Epiphytes
+
+The workflow uses Bray-Curtis dissimilarity and PCoA to visualize differences in microbial community composition.
 
 ## Reproducibility
 
-A fixed random seed is used in the script, and the analysis is documented in a single R script to facilitate reproducibility.
+The workflows are implemented in R using the `vegan` package and are documented step-by-step to facilitate transparent and reproducible community ecology analyses.
 
-## Purpose
+## Data availability
 
-This repository is part of my ongoing development of R-based skills for reproducible microbiome and community ecology research.
+The underlying doctoral research dataset is not included in this public repository.
 
-## Data note
+The PhD-related scripts document the analytical workflow while avoiding public distribution of the underlying research dataset.
 
-The dataset included in this repository is a simulated dataset created for learning and demonstration purposes. It does not represent unpublished experimental data or data from a specific research study.
+## Statistical note
 
-This is what I did
+The PhD-related datasets represented in this repository consist of aggregated observations without biological replicates. Therefore, these analyses are presented as descriptive ordination analyses rather than inferential statistical tests.
+
+Inferential PERMANOVA should be conducted when appropriate biological replication and sample-level metadata are available.
+
+## Detailed PhD analysis documentation
+
+See [`README_PHD_ANALYSIS.md`](README_PHD_ANALYSIS.md) for further information about the doctoral research-related workflows and their interpretation.
+
+## Software
+
+- R
+- vegan
+- Bray-Curtis dissimilarity
+- Principal Coordinates Analysis (PCoA)
+- PERMANOVA
