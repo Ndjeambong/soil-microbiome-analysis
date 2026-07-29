@@ -36,7 +36,7 @@ community <- data.frame(
 rownames(community) <- paste0("Sample_", 1:12)
 
 # ---------------------------------------------------------
-# 2. Experimental grouping
+# 2. Sample grouping
 # ---------------------------------------------------------
 
 metadata <- data.frame(
