@@ -1,24 +1,28 @@
- # Soil Microbiome Analysis
+# Soil Microbiome Analysis
 
 This repository contains reproducible R examples related to soil microbiome and community ecology analysis.
 
-## Current example
+## Current workflow
 
-### PERMANOVA
-
-The `permanova_example.R` script demonstrates a basic PERMANOVA workflow using the `vegan` package.
+The `permanova_example.R` script demonstrates a basic multivariate community analysis workflow using the `vegan` package.
 
 The workflow includes:
 
-- Example microbial community abundance data
-- Sample metadata and treatment grouping
-- Bray-Curtis dissimilarity
-- PERMANOVA using `adonis2()`
-- 999 permutations
+1. Simulated microbial community abundance data
+2. Sample metadata and treatment grouping
+3. Bray-Curtis dissimilarity
+4. PERMANOVA using `adonis2()`
+5. 999 permutations
+6. Assessment of multivariate dispersion using `betadisper()`
+7. Permutation testing of dispersion using `permutest()`
 
 ## R package
 
 - `vegan`
+
+## Reproducibility
+
+A fixed random seed is used in the script, and the analysis is documented in a single R script to facilitate reproducibility.
 
 ## Purpose
 
@@ -26,4 +30,4 @@ This repository is part of my ongoing development of R-based skills for reproduc
 
 ## Data note
 
-The dataset included in this repository is an example dataset created for learning and demonstration purposes. It does not represent unpublished experimental data or data from a specific research study.
+The dataset included in this repository is a simulated dataset created for learning and demonstration purposes. It does not represent unpublished experimental data or data from a specific research study.
